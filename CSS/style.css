@@ -1,0 +1,357 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Container used for styling the custom select, the buttom class below adds the bg gradient, corners, etc. */
+.custom-select {
+  position: relative;
+  height: 2rem;
+  display: block;
+  padding: 0;
+  width: 100%; }
+
+/* This is the native select, we're making everything but the text invisible so we can see the button styles in the wrapper */
+.custom-select select {
+  width: 100%;
+  margin: 0;
+  background: none;
+  border: 1px solid transparent;
+  outline: none;
+  box-sizing: border-box;
+  /* Remove select styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select. Note this si a 2x image so it will look bad in browsers that don't support background-size. In production, you'd handle this resolution switch via media query but this is a demo. */
+.custom-select::after {
+  content: "";
+  position: absolute;
+  pointer-events: none; }
+
+/* Hover style */
+/* Focus style */
+.custom-select select:focus {
+  outline: none; }
+
+/* ------------------------------------  */
+/* START OF UGLY BROWSER-SPECIFIC HACKS */
+/* ----------------------------------  */
+/* OPERA - Pre-Blink nix the custom arrow, go with a native select button to keep it simple. Targeted via this hack http://browserhacks.com/#hack-a3f166304aafed524566bc6814e1d5c7 */
+x:-o-prefocus, .custom-select::after {
+  display: none; }
+
+/* IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance, IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting */
+/* The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .custom-select select::-ms-expand {
+    display: none; }
+  .custom-select select:focus::-ms-value {
+    background: transparent;
+    color: #222; } }
+
+/* FIREFOX won't let us hide the native select arrow, so we have to make it wider than needed and clip it via overflow on the parent container. The percentage width is a fallback since FF 4+ supports calc() so we can just add a fixed amount of extra width to push the native arrow out of view. We're applying this hack across all FF versions because all the previous hacks were too fragile and complex. You might want to consider not using this hack and using the native select arrow in FF. Note this makes the menus wider than the select button because they display at the specified width and aren't clipped. Targeting hack via http://browserhacks.com/#hack-758bff81c5c32351b02e10480b5ed48e */
+/* Show only the native arrow */
+@-moz-document url-prefix() {
+  .custom-select {
+    overflow: hidden; }
+  .custom-select select {
+    width: 120%;
+    width: calc(100% + em); } }
+
+/* Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring */
+.custom-select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+/* ------------------------------------  */
+/*  END OF UGLY BROWSER-SPECIFIC HACKS  */
+/* ------------------------------------  */
+.mainpage {
+  background-color: #ED4343; }
+
+.containerMainPage {
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-line-pack: start;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  height: 100vh; }
+
+.orb {
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  border-radius: 50px;
+  text-align: center;
+  -webkit-animation: border-pulse 1s infinite;
+  animation: border-pulse 1s infinite; }
+
+@-webkit-keyframes border-pulse {
+  0% {
+    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.1), 0 0 0 2rem rgba(255, 255, 255, 0.15), 0 0 0 3rem rgba(255, 255, 255, 0.2); }
+  50% {
+    box-shadow: 0 0 0 1.25rem rgba(255, 255, 255, 0.1), 0 0 0 2.75rem rgba(255, 255, 255, 0.1), 0 0 0 4rem rgba(255, 255, 255, 0); }
+  75% {
+    box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.1), 0 0 0 3rem rgba(255, 255, 255, 0), 0 0 0 5rem rgba(255, 255, 255, 0); }
+  100% {
+    box-shadow: 0 0 0 1.75rem rgba(255, 255, 255, 0), 0 0 0 3.75rem rgba(255, 255, 255, 0), 0 0 0 6rem rgba(255, 255, 255, 0); } }
+
+@keyframes border-pulse {
+  0% {
+    box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.1), 0 0 0 2rem rgba(255, 255, 255, 0.15), 0 0 0 3rem rgba(255, 255, 255, 0.2); }
+  50% {
+    box-shadow: 0 0 0 1.25rem rgba(255, 255, 255, 0.1), 0 0 0 2.75rem rgba(255, 255, 255, 0.1), 0 0 0 4rem rgba(255, 255, 255, 0); }
+  75% {
+    box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.1), 0 0 0 3rem rgba(255, 255, 255, 0), 0 0 0 5rem rgba(255, 255, 255, 0); }
+  100% {
+    box-shadow: 0 0 0 1.75rem rgba(255, 255, 255, 0), 0 0 0 3.75rem rgba(255, 255, 255, 0), 0 0 0 6rem rgba(255, 255, 255, 0); } }
+
+.border-pulse {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: salmon;
+  -webkit-animation: border-pulse 5s infinite ease-in-out;
+  animation: border-pulse 5s infinite ease-in-out; }
+
+.containerForm {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 80vh;
+  padding: 5%;
+  line-height: 1.5; }
+
+.who {
+  text-align: center; }
+
+.who h1 {
+  padding-bottom: 5%; }
+
+.container2 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  line-height: 1.5; }
+
+.encounter {
+  height: 30vh; }
+
+.bottomband {
+  height: 30vh;
+  background-color: black;
+  margin-bottom: 0%; }
+
+.addhere {
+  color: black;
+  height: 40vh; }
+
+.bottomP3 {
+  height: 30vh;
+  background-color: black;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.buttonP3 {
+  background-color: #ED4343;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-left: 2%;
+  margin-right: 2%; }
+
+.containerReport {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 80vh;
+  padding: 5%;
+  line-height: 1.5; }
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "raleway", serif;
+  font-size: 18px; }
+
+.whiteBkg {
+  background-color: white; }
+
+input {
+  border: none; }
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center; }
+
+h2 {
+  font-size: 1.8rem;
+  text-align: center; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+.change {
+  border: 8px solid red; }
+
+#checkin {
+  background-color: #ED4343;
+  color: white;
+  height: 2rem; }
+
+button {
+  background-color: #ED4343;
+  color: white;
+  height: 2rem;
+  border: none;
+  width: 100%; }
+
+.encounter {
+  background-color: white;
+  color: black; }
+
+.button {
+  background-color: #ED4343;
+  color: white; }
+
+input {
+  width: 100%;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+  border: none; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: '';
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+  line-height: 1.2rem;
+  background-color: white;
+  margin-bottom: 1rem; }
+
+*::-webkit-input-placeholder {
+  color: #ED4343; }
+
+*:-moz-placeholder {
+  color: #ED4343; }
+
+*:-ms-input-placeholder {
+  /* IE10+ */
+  color: #ED4343; }
+
+.show-validation {
+  transition: 0.5s linear all; }
+
+.show-validation input.ng-invalid, .show-validation select.ng-invalid, .show-validation textarea.ng-invalid {
+  border: 5px solid red;
+  background-color: blue; }
+
+fieldset {
+  border: none; }
+
+textarea {
+  width: 100%; }
+
+.bottom {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  background: cover;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 100%; }

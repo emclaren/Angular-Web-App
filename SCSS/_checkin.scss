@@ -1,0 +1,40 @@
+.containerForm{
+ display: flex;
+ flex-direction:column;
+ justify-content: space-around; 
+ height: 80vh;
+padding: 5%;
+line-height:1.5;
+ 
+
+}
+
+
+.who{
+    text-align: center;
+
+}
+.who h1{
+    padding-bottom:5%;
+}
+
+
+
+
+
+// .custom-select {
+//         height:2rem;
+//         background:white;
+
+//         select {
+//             font-size:1rem;
+//             line-height:2rem;
+//             padding-left:0.5rem;
+//             font-family: 'Raleway';
+//         }
+
+//         select.placeholder {
+//             color:$red-color;
+//         }
+//     }
+

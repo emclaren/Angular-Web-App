@@ -1,0 +1,235 @@
+@import"reset";
+@import"customselect";
+@import"mainpage";
+@import"checkin";
+@import"encounters";
+@import"report";
+
+
+
+
+body {
+	background-color: black;
+	color:white;
+	font-family: "raleway", serif;
+	font-size: 18px;
+}
+
+.whiteBkg{
+	background-color:white;
+}
+
+
+
+
+
+// .container2{ 
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-between;	
+// 	align-items: center;
+// 	 display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-flex-direction: column;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+//     -webkit-flex-wrap: nowrap;
+//     -ms-flex-wrap: nowrap;
+//     flex-wrap: nowrap;
+//     -webkit-justify-content: space-around;
+//     -ms-flex-pack: distribute;
+//     justify-content: space-around;
+//     -webkit-align-content: flex-start;
+//     -ms-flex-line-pack: start;
+//     align-content: flex-start;
+//     height: 100vh;
+ 
+// }
+// .containerForm{ 
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-between;	
+// 	// align-items: center;
+// 	 display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-flex-direction: column;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+//     -webkit-flex-wrap: nowrap;
+//     -ms-flex-wrap: nowrap;
+//     flex-wrap: nowrap;
+//     -webkit-justify-content: space-around;
+//     -ms-flex-pack: distribute;
+//     justify-content: space-around;
+//     -webkit-align-content: flex-start;
+//     -ms-flex-line-pack: start;
+//     align-content: flex-start;
+//     height: 100%;
+// }
+
+// .containerForm h1{
+// 	text-align: center;
+
+// }
+
+// .containerForm2{ 
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-between;	
+// 	// align-items: center;
+// 	 display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-flex-direction: column;
+//     -ms-flex-direction: column;
+//     flex-direction: column;
+//     -webkit-flex-wrap: nowrap;
+//     -ms-flex-wrap: nowrap;
+//     flex-wrap: nowrap;
+//     -webkit-justify-content: space-around;
+//     -ms-flex-pack: distribute;
+//     justify-content: space-around;
+//     -webkit-align-content: flex-start;
+//     -ms-flex-line-pack: start;
+//     align-content: flex-start;
+//     height: 100vh;
+// }
+
+input{
+	border:none;
+}
+
+h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	text-align:center;
+
+	
+}
+
+h2{
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+
+
+a {
+	color: white;
+	text-decoration: none;
+
+}
+
+// .registrationForm{
+// 	 text-align: center;
+// 	 display: flex;
+// 	  flex-direction: column;
+// 	  justify-content:center;
+// 	   display: -webkit-box;
+//   display: -moz-box;
+//   display: -ms-flexbox;
+//   display: -webkit-flex;
+//   display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.change
+{
+  border:8px solid red;
+}
+
+#checkin {
+	background-color: #ED4343;
+	color: white;
+	height: 2rem;
+
+}
+button{
+	background-color: #ED4343;
+	color: white;
+	height: 2rem;
+	border: none;
+	width: 100%
+
+}
+
+.encounter{
+	background-color: white;
+	color: black;
+}
+
+.button{
+	background-color: #ED4343;
+	color:white;
+	
+}
+input{
+	 width: 100%;
+	 line-height: 1.2rem;
+	 margin-bottom: 1rem;
+	 border:none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    // text-indent: 1px;
+    text-overflow: '';
+    width: 100%;
+ 	border:none;
+ 	border-radius: 0px;
+ 	line-height: 1.2rem;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+*::-webkit-input-placeholder {
+  color: #ED4343;
+}
+*:-moz-placeholder {
+  color: #ED4343;
+}
+*:-ms-input-placeholder { /* IE10+ */
+  color: #ED4343;
+}
+
+.show-validation{
+	transition: 0.5s linear all;
+}
+
+.show-validation{
+	input, select, textarea{
+		&.ng-invalid{
+			border: 5px solid red;
+			background-color:blue;
+		}
+	}
+	}
+
+	
+fieldset{
+	border:none;
+}
+
+textarea{
+	width: 100%;
+}
+.bottom {
+	display:flex;
+	background-color: black;
+	background: cover;
+	align-self: flex-end;
+	width: 100%}
+
+.bottom2{
+
+}

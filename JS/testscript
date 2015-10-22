@@ -1,0 +1,62 @@
+// var app=angular.module('formExample', [])
+//     app.controller('ExampleController', ['$scope', function($scope) {
+// $scope.user{
+
+
+// }
+
+//       $scope.master = {};
+
+//       $scope.update = function(user) {
+//         $scope.master = angular.copy(user);
+//       };
+
+//       $scope.reset = function() {
+//         $scope.user = angular.copy($scope.master);
+//       };
+
+//       $scope.reset();
+
+  
+//     }]);
+
+
+ //actual code for website:
+
+angular.module('marsApp', [])
+// .run(['$rootScope', function($rootScope){
+
+// }])
+
+.controller('RegisterFormCtrl', ['$scope', function($scope) {
+$scope.submitRegistration = function (e, form){
+	e.preventDefault()
+	console.log(form);
+
+}
+}])
+
+
+
+function RegisterFormCtrl($scope, $rootscope, $state, $cookies){
+
+	$cookies.putObject('mars_user', undefined);
+	$scope.showvalidation =false;
+	$scope.jobs= [ 'Janitor', 'Alien Hunter', 'Dust Farmer'];
+}
+$scope.enter= function(e){
+	e.preventDefault();
+
+	if ($scope.myForm.$invalid){
+		$scope.showValidation = true;
+	};
+
+
+
+.controller('ReportFormCtrl', ['$scope', function($scope) {
+$scope.submitReport = function (e, form){
+	e.preventDefault()
+	console.log(form);
+
+}
+}]);

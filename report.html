@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="marsApp">
+	
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Welcome to Mars</title>
+		<!--Font Awesome for Icons-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+		<!--Instagrid Style Sheet-->
+		<link rel="stylesheet" href="css/style.css">			
+	</head>
+	
+<body>
+<div class="wrapper">	
+<div  class= "containerForm2">
+	<div class="heading">
+	<h1> Report Encounter</h1>
+	<h2>Saftey on Mars is your responsibility</h2>
+	</div>
+	<div class="containerReport">
+		<div ng-controller="ReportFormCtrl">
+
+		  <form novalidate name="myForm" ng-submit="expression">
+		  	<fieldset>
+		  	  	<select name="alien"  ng-model="alien" ng-class="{'placeholder':!alien}" required>
+		         <option value="" class="placeholder">Select Alien Type</option>
+		       	<option value="{{alien}}" ng-repeat="alien in aliens">{{alien}} </option>
+		  			<textarea name="Text1" placeholder="Action Taken" cols="40" rows="5" ></textarea>
+		  	</fieldset>
+		  <fieldset>
+		
+ 		<input type="submit" id="checkin" value="Submit Report" ng-click="submitRegistration($event, myForm)"  />
+ 	</fieldset>
+		 </form>	
+		</div>
+	</div>
+	
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="js/script.js"></script>
+</div>
+	</body>
+</html>
