@@ -1,51 +1,42 @@
-.container2{
+
+.wrapper3{
  display: flex;
- flex-direction:column;
- justify-content: space-around; 
-
-line-height:1.5;
- 
-
+ background-color: white;
+ flex-direction: column;
+ justify-content: space-between; 
+ height: 100vh;
 }
 
-
-
-.encounter{
-height: 30vh;
+.wrapper3 h1{
+	color:black;
 }
 
-.addhere{
-
-}
-
-.bottomband{
-height:30vh;
-background-color:black;
-margin-bottom:0%
+span{
+	font-size:1rem;
 }
 
 
 .addhere {
 	color:black;
-	height: 40vh;
+	
 }
-
-
-
 .bottomP3{
-	height:30vh;
 	background-color: black;
 	display:flex;
-	 flex-direction:column;
- 	justify-content: center; 
+	flex-direction:column;
+ 	justify-content: center;
+ 	padding:2rem; 
+ 	margin:0%
 }
 
 .buttonP3{
 	background-color:#ED4343;
-	display: block;
 	text-align: center;
 	width:100%;
 	margin-left: 2%;
 	margin-right:2%;
+	font-size: 1rem;
+	padding:1rem;
+	margin-bottom: 0%
 
 }

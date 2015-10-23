@@ -4,7 +4,11 @@
 @import"checkin";
 @import"encounters";
 @import"report";
+@import"animations";
 
+*{
+box-sizing:border-box;
+}
 
 
 
@@ -21,97 +25,20 @@ body {
 
 
 
-
-
-// .container2{ 
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: space-between;	
-// 	align-items: center;
-// 	 display: -ms-flexbox;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-flex-direction: column;
-//     -ms-flex-direction: column;
-//     flex-direction: column;
-//     -webkit-flex-wrap: nowrap;
-//     -ms-flex-wrap: nowrap;
-//     flex-wrap: nowrap;
-//     -webkit-justify-content: space-around;
-//     -ms-flex-pack: distribute;
-//     justify-content: space-around;
-//     -webkit-align-content: flex-start;
-//     -ms-flex-line-pack: start;
-//     align-content: flex-start;
-//     height: 100vh;
- 
-// }
-// .containerForm{ 
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: space-between;	
-// 	// align-items: center;
-// 	 display: -ms-flexbox;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-flex-direction: column;
-//     -ms-flex-direction: column;
-//     flex-direction: column;
-//     -webkit-flex-wrap: nowrap;
-//     -ms-flex-wrap: nowrap;
-//     flex-wrap: nowrap;
-//     -webkit-justify-content: space-around;
-//     -ms-flex-pack: distribute;
-//     justify-content: space-around;
-//     -webkit-align-content: flex-start;
-//     -ms-flex-line-pack: start;
-//     align-content: flex-start;
-//     height: 100%;
-// }
-
-// .containerForm h1{
-// 	text-align: center;
-
-// }
-
-// .containerForm2{ 
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: space-between;	
-// 	// align-items: center;
-// 	 display: -ms-flexbox;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-flex-direction: column;
-//     -ms-flex-direction: column;
-//     flex-direction: column;
-//     -webkit-flex-wrap: nowrap;
-//     -ms-flex-wrap: nowrap;
-//     flex-wrap: nowrap;
-//     -webkit-justify-content: space-around;
-//     -ms-flex-pack: distribute;
-//     justify-content: space-around;
-//     -webkit-align-content: flex-start;
-//     -ms-flex-line-pack: start;
-//     align-content: flex-start;
-//     height: 100vh;
-// }
-
 input{
 	border:none;
 }
 
 h1{
 	font-size: 2rem;
-	text-transform: uppercase;
 	text-align:center;
-
-	
+	font-weight: 700;	
 }
 
 h2{
 	font-size: 1.8rem;
 	text-align: center;
+	font-weight: 400;
 }
 
 
@@ -122,39 +49,26 @@ a {
 
 }
 
-// .registrationForm{
-// 	 text-align: center;
-// 	 display: flex;
-// 	  flex-direction: column;
-// 	  justify-content:center;
-// 	   display: -webkit-box;
-//   display: -moz-box;
-//   display: -ms-flexbox;
-//   display: -webkit-flex;
-//   display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
 
 .change
 {
   border:8px solid red;
 }
 
-#checkin {
-	background-color: #ED4343;
-	color: white;
-	height: 2rem;
+// #checkin {
+// 	background-color: #ED4343;
+// 	color: white;
+// 	height: 7rem;
+// 	padding-top:50%;
 
-}
-button{
-	background-color: #ED4343;
-	color: white;
-	height: 2rem;
-	border: none;
-	width: 100%
-
-}
+// }
+// button{
+// 	background-color: #ED4343;
+// 	color: white;
+// 	padding-top:5%;
+// 	border: none;
+// 	width: 100%
+// }
 
 .encounter{
 	background-color: white;
@@ -164,13 +78,22 @@ button{
 .button{
 	background-color: #ED4343;
 	color:white;
-	
+	height: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	font-size:1rem;
+
 }
+
 input{
 	 width: 100%;
-	 line-height: 1.2rem;
-	 margin-bottom: 1rem;
+	 margin-bottom: 1.7rem;
 	 border:none;
+	 font-size:1rem;
+	 height: 2rem;
+	 font-weight: 300;
+	 padding-left: .5rem;
+	 
 }
 
 select {
@@ -184,6 +107,11 @@ select {
  	line-height: 1.2rem;
     background-color: white;
     margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    height: 2rem;
+    padding-left: .5rem;
+    
 }
 
 
@@ -202,27 +130,47 @@ select {
   color: #ED4343;
 }
 
-.show-validation{
-	transition: 0.5s linear all;
+// .show-validation{
+// 	transition: 0.5s linear all;
+// }
+
+// .show-validation{
+// 	input, select, textarea{
+// 		&.ng-invalid{
+// 			border: 5px solid red;
+// 			background-color:blue;
+// 		}
+// 	}
+// 	}
+
+.show-validation {
+ transition: 0.5s linear all;
 }
 
-.show-validation{
-	input, select, textarea{
-		&.ng-invalid{
-			border: 5px solid red;
-			background-color:blue;
-		}
-	}
-	}
+@keyframes invalid-input {
+ 0% {
+   box-shadow:
+     0 0 0 0rem rgba(230, 28, 38 , 1);
+ }
+ 100% {
+   box-shadow:
+     0 0 0 0.5rem rgba(230, 28, 38, 0.2);
+ }
+}
 
+.show-validation {
+ input, select, textarea {
+   &.ng-invalid {
+     border-radius: 0;
+     animation: invalid-input 0.5s infinite;
+   }
+ }
+}
 	
 fieldset{
 	border:none;
 }
 
-textarea{
-	width: 100%;
-}
 .bottom {
 	display:flex;
 	background-color: black;

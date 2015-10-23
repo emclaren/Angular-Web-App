@@ -1,48 +1,20 @@
-<!DOCTYPE html>
-<html ng-app="marsApp">
-	
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Welcome to Mars</title>
-		<!--Font Awesome for Icons-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
-		<!--Instagrid Style Sheet-->
-		<link rel="stylesheet" href="css/style.css">			
-	</head>
-	
-	<body>
 
-<div class="wrapper">	
-		<div ng-controller="RegisterFormCtrl">
-			<div  class= "containerForm">	
-				<div class="who">
-				<h1> Who are you? </h1>
-				<!-- <div class="registrationForm"> -->
-			 		<form action= ""  novalidate class="mars-form" name="myForm" ng-class="{'show-validation': showValidation}"  ng-submit="submit()"> 
-				  	
-				   			<input type="text" placeholder="Name" ng-model="user.name" ng-maxlength="70" required/><br />
-				  			<input type="number" placeholder="Age" ng-model="user.age" min="1" max="99" required><br />
-				  			<select name="occupation"  ng-model="useroccupation" ng-class="{'placeholder': !userOccupation}" required>
-		                        <option value="" class="placeholder">Select Occupation</option>
-		                        	<option value="{{job}}" ng-repeat="job in jobs">{{job}} </option>
-		            		</select> </br> 
-		                   
-		          </div>
-		          <div class="checkinbutton">
-								<!-- <button class="button" name="submitRegistration" ng-click"enter($event.myForm)"> Check in </button>   -->	
-		  				<input type="submit" class="button" id="checkin" value="Check-in" ng-click="submitRegistration($event, myForm)" />
-						</div>
-					</form>	
+<div class="wrapper2">	
+	<div  class= "containerForm">	
+		<div class="who">
+			<h1> Who are you? </h1>
+			<form novalidate class="mars-form" name="myForm" ng-class="{'show-validation': showValidation}"  ng-submit="submit()"> 
+				<input type="text" placeholder="Name" ng-model="colonist.name" ng-maxlength="70" required/><br />
+				<input type="number" placeholder="Age" ng-model="colonist.age" min="1" max="99" required><br />
+				<select name="occupation"  ng-model="colonist.job_id" id="occupation" ng-class="{'placeholder': !colonist.job_id}" required>
+					<option value="" class="placeholder">Select Occupation</option>
+		            <option value="{{job.id}}" ng-repeat="job in jobs">{{job.name}} </option>
+		        </select> </br>  
+		        <div class="checkin-button">
+		  			<input type="submit" class="button"  value="Check-in" ng-click="submitRegistration($event, myForm)" />
 				</div>
-			</div>
+			</form>	
 		</div>
-<a href="encounters.html"><p> link </p> </a>
-		<!-- get rid of breaks -->
-
-			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"> </script>
-			<script src="js/script.js"></script>
 	</div>
-	</body>
-</html>
+</div>
+	

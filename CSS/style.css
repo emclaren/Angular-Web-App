@@ -113,6 +113,9 @@ x:-o-prefocus, .custom-select::after {
 .mainpage {
   background-color: #ED4343; }
 
+.header h1 {
+  text-transform: uppercase; }
+
 .containerMainPage {
   display: flex;
   -webkit-flex-direction: column;
@@ -189,41 +192,38 @@ x:-o-prefocus, .custom-select::after {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   height: 80vh;
-  padding: 5%;
-  line-height: 1.5; }
+  padding: 5%; }
 
 .who {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem; }
 
 .who h1 {
-  padding-bottom: 5%; }
+  padding: 3rem; }
 
-.container2 {
+.wrapper3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  background-color: white;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  line-height: 1.5; }
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100vh; }
 
-.encounter {
-  height: 30vh; }
+.wrapper3 h1 {
+  color: black; }
 
-.bottomband {
-  height: 30vh;
-  background-color: black;
-  margin-bottom: 0%; }
+span {
+  font-size: 1rem; }
 
 .addhere {
-  color: black;
-  height: 40vh; }
+  color: black; }
 
 .bottomP3 {
-  height: 30vh;
   background-color: black;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -233,15 +233,19 @@ x:-o-prefocus, .custom-select::after {
   flex-direction: column;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 2rem;
+  margin: 0%; }
 
 .buttonP3 {
   background-color: #ED4343;
-  display: block;
   text-align: center;
   width: 100%;
   margin-left: 2%;
-  margin-right: 2%; }
+  margin-right: 2%;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 0%; }
 
 .containerReport {
   display: -webkit-flex;
@@ -250,12 +254,20 @@ x:-o-prefocus, .custom-select::after {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   height: 80vh;
-  padding: 5%;
-  line-height: 1.5; }
+  padding: 5%; }
+
+textarea {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: .5rem; }
+
+* {
+  box-sizing: border-box; }
 
 body {
   background-color: black;
@@ -271,12 +283,13 @@ input {
 
 h1 {
   font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  font-weight: 700; }
 
 h2 {
   font-size: 1.8rem;
-  text-align: center; }
+  text-align: center;
+  font-weight: 400; }
 
 a {
   color: white;
@@ -285,31 +298,26 @@ a {
 .change {
   border: 8px solid red; }
 
-#checkin {
-  background-color: #ED4343;
-  color: white;
-  height: 2rem; }
-
-button {
-  background-color: #ED4343;
-  color: white;
-  height: 2rem;
-  border: none;
-  width: 100%; }
-
 .encounter {
   background-color: white;
   color: black; }
 
 .button {
   background-color: #ED4343;
-  color: white; }
+  color: white;
+  height: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 1rem; }
 
 input {
   width: 100%;
-  line-height: 1.2rem;
-  margin-bottom: 1rem;
-  border: none; }
+  margin-bottom: 1.7rem;
+  border: none;
+  font-size: 1rem;
+  height: 2rem;
+  font-weight: 300;
+  padding-left: .5rem; }
 
 select {
   -webkit-appearance: none;
@@ -320,7 +328,11 @@ select {
   border-radius: 0px;
   line-height: 1.2rem;
   background-color: white;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  height: 2rem;
+  padding-left: .5rem; }
 
 *::-webkit-input-placeholder {
   color: #ED4343; }
@@ -335,15 +347,25 @@ select {
 .show-validation {
   transition: 0.5s linear all; }
 
+@-webkit-keyframes invalid-input {
+  0% {
+    box-shadow: 0 0 0 0rem #e61c26; }
+  100% {
+    box-shadow: 0 0 0 0.5rem rgba(230, 28, 38, 0.2); } }
+
+@keyframes invalid-input {
+  0% {
+    box-shadow: 0 0 0 0rem #e61c26; }
+  100% {
+    box-shadow: 0 0 0 0.5rem rgba(230, 28, 38, 0.2); } }
+
 .show-validation input.ng-invalid, .show-validation select.ng-invalid, .show-validation textarea.ng-invalid {
-  border: 5px solid red;
-  background-color: blue; }
+  border-radius: 0;
+  -webkit-animation: invalid-input 0.5s infinite;
+  animation: invalid-input 0.5s infinite; }
 
 fieldset {
   border: none; }
-
-textarea {
-  width: 100%; }
 
 .bottom {
   display: -webkit-flex;

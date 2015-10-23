@@ -1,13 +1,15 @@
 .containerReport{
-
-
  display: flex;
  flex-direction:column;
- justify-content: space-around; 
+ justify-content: space-between; 
  height: 80vh;
 padding: 5%;
-line-height:1.5;
- 
+}
 
 
+textarea{
+	width: 100%;
+	font-size:1rem;
+	font-weight:300;
+	padding-left: .5rem 
 }
