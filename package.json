@@ -1,17 +1,33 @@
 {
   "name": "formoct20",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "EM",
   "license": "ISC",
   "devDependencies": {
     "connect-history-api-fallback": "^1.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.0.4"
-  }
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp": "^3.9.0",
+    "angular-animate": "^1.4.7",
+    "browser-sync": "^2.9.11",
+    "gulp-sass": "^2.0.4",
+    "connect-history-api-fallback": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emclaren/project4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emclaren/project4/issues"
+  },
+  "homepage": "https://github.com/emclaren/project4#readme",
+  "description": ""
 }
