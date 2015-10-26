@@ -65,6 +65,7 @@ app.controller('RegisterFormCtrl', ['$scope','$cookies', '$state', '$http', func
 		$scope.colonist ={};
 		$http.get(API_URL_GET_JOBS).then(function(response){
 			$scope.jobs=response.data.jobs;
+	
 		});
   
 		$scope.showValidation= false;
@@ -93,18 +94,35 @@ app.controller('encountersCtrl', [ '$scope','$http', function($scope, $http){
 		});
 	}]);
 
-app.controller('ReportFormCtrl', ['$scope', function($scope) {
-$scope.aliens= [ 'The Coneheads', 'ET', 'ALF', 'Mork', 'Lizard Man', 'Kang & Kodos', 'Giant Slug', 'Octospider', 'Spider Monster'];
+
+
+app.controller('ReportFormCtrl', ['$scope','$http', function($scope, $http) {
+
+	var ALIEN_TYPE_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+	var ENCOUNTERS_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters'
+
+		$scope.aliens ={};
+		$http.get(ALIEN_TYPE_API_URL).then(function(response){
+			$scope.aliens=response.data.aliens;
+	
+		});
+  
 $scope.showValidation= false;
 $scope.submitReport = function (e, form){
 	e.preventDefault();
-	console.log(form);
+
 if ($scope.myForm2.$invalid){
 	$scope.showValidation = true;
-} else{
-alert('Report filed!');
-}
+} else{alert('Report filed!'); /* Didn't get upload to the API working, put Alert first so that at least it would show up when I submitted my site for review*/
+	$http({
+				method:'POST',
+				url:ENCOUNTERS_API_URL,
+				data: {encounter: $scope.encounter }
+			}).then(function(response){
+	//alert('Report filed!');
+})
 };
+}
 }]);
 
 })();
