@@ -10,23 +10,11 @@
 box-sizing:border-box;
 }
 
-
-
 body {
 	background-color: black;
 	color:white;
 	font-family: "raleway", serif;
 	font-size: 18px;
-}
-
-.whiteBkg{
-	background-color:white;
-}
-
-
-
-input{
-	border:none;
 }
 
 h1{
@@ -41,34 +29,14 @@ h2{
 	font-weight: 400;
 }
 
-
-
 a {
 	color: white;
 	text-decoration: none;
-
 }
 
-
-.change
-{
+.change{
   border:8px solid red;
 }
-
-// #checkin {
-// 	background-color: #ED4343;
-// 	color: white;
-// 	height: 7rem;
-// 	padding-top:50%;
-
-// }
-// button{
-// 	background-color: #ED4343;
-// 	color: white;
-// 	padding-top:5%;
-// 	border: none;
-// 	width: 100%
-// }
 
 .encounter{
 	background-color: white;
@@ -82,93 +50,6 @@ a {
 	padding-top: 1rem;
 	padding-bottom: 2rem;
 	font-size:1rem;
-
-}
-
-input{
-	 width: 100%;
-	 margin-bottom: 1.7rem;
-	 border:none;
-	 font-size:1rem;
-	 height: 2rem;
-	 font-weight: 300;
-	 padding-left: .5rem;
-	 
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    // text-indent: 1px;
-    text-overflow: '';
-    width: 100%;
- 	border:none;
- 	border-radius: 0px;
- 	line-height: 1.2rem;
-    background-color: white;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    font-weight: 300;
-    height: 2rem;
-    padding-left: .5rem;
-    
-}
-
-
-
-
-
-
-
-*::-webkit-input-placeholder {
-  color: #ED4343;
-}
-*:-moz-placeholder {
-  color: #ED4343;
-}
-*:-ms-input-placeholder { /* IE10+ */
-  color: #ED4343;
-}
-
-// .show-validation{
-// 	transition: 0.5s linear all;
-// }
-
-// .show-validation{
-// 	input, select, textarea{
-// 		&.ng-invalid{
-// 			border: 5px solid red;
-// 			background-color:blue;
-// 		}
-// 	}
-// 	}
-
-.show-validation {
- transition: 0.5s linear all;
-}
-
-@keyframes invalid-input {
- 0% {
-   box-shadow:
-     0 0 0 0rem rgba(230, 28, 38 , 1);
- }
- 100% {
-   box-shadow:
-     0 0 0 0.5rem rgba(230, 28, 38, 0.2);
- }
-}
-
-.show-validation {
- input, select, textarea {
-   &.ng-invalid {
-     border-radius: 0;
-     animation: invalid-input 0.5s infinite;
-   }
- }
-}
-	
-fieldset{
-	border:none;
 }
 
 .bottom {
@@ -176,8 +57,5 @@ fieldset{
 	background-color: black;
 	background: cover;
 	align-self: flex-end;
-	width: 100%}
-
-.bottom2{
-
+	width: 100%
 }

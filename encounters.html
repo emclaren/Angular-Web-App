@@ -1,17 +1,10 @@
-
-
-	<div class="wrapper3">	
+<div class="wrapper3">	
 		<div  class= "encounter-header">	 
 			<h1> Recent Encouters<span></br>See an Ailen? Report it!</span></h1>
 		</div>
-
 		<div class="addhere">		
-			<p> Thursday, Oct 22 Lizard</p> <p>Smoked it</p>
-			<p> Thursday, Oct 22 - Lizard</p> <p>Smoked it</p>
-			<p> Thursday, Oct 22 - Lizard</p> <p>Smoked it</p>
-			<p> Thursday, Oct 22 - Lizard</p> <p>Smoked it</p>
+			<div ng-repeat="encounter in encounters"><p>{{encounter.date}} - {{encounter.atype}}</p> <p>{{encounter.action}}</p>
 		</div>
-	
 		<div class="bottomP3">
 			<div class="buttonP3">
 				<a ui-sref="page4">

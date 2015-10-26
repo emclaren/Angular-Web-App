@@ -8,7 +8,7 @@
 				<input type="number" placeholder="Age" ng-model="colonist.age" min="1" max="99" required><br />
 				<select name="occupation"  ng-model="colonist.job_id" id="occupation" ng-class="{'placeholder': !colonist.job_id}" required>
 					<option value="" class="placeholder">Select Occupation</option>
-		            <option value="{{job.id}}" ng-repeat="job in jobs">{{job.name}} </option>
+		            <option value="{{job.id}}" ng-repeat="job in jobs">{{job.name}}</option>
 		        </select> </br>  
 		        <div class="checkin-button">
 		  			<input type="submit" class="button"  value="Check-in" ng-click="submitRegistration($event, myForm)" />

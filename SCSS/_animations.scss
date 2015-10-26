@@ -1,3 +1,5 @@
+// Pulsing border on Mainpage Orb
+
 @keyframes border-pulse {
   0%   { 
 	box-shadow:
@@ -24,23 +26,37 @@
 		0 0 0 6rem rgba(255, 255, 255, 0);
    }
 }
+//Flashing border in Form Fields
 @keyframes invalid-input {
 	0% {
 		box-shadow:
-			0 0 0 0rem rgba($red-color, 1);
+			0 0 0 0rem rgba(#ed4343, 1);
 	}
 	100% {
 		box-shadow:
-			0 0 0 0.5rem rgba($red-color, 0.2);
+			0 0 0 0.5rem rgba(#ed4343, 0.2);
 	}
 }
-/* Have to set height explicity on ui-view 
-to prevent collapsing during animation*/
-.ui-view-container {
-	position:absolute; 
-	width:100vw;
-	height:100vh;
+
+.show-validation {
+ transition: 0.5s linear all;
 }
+
+
+.show-validation {
+ input, select, textarea {
+   &.ng-invalid {
+     border-radius: 0;
+     animation: invalid-input 0.5s infinite;
+   }
+ }
+}
+    
+
+
+//Animations for between pags
+
+​
 [ui-view].ng-enter, [ui-view].ng-leave {
   position: absolute;
   left: 0;
@@ -50,97 +66,117 @@ to prevent collapsing during animation*/
     -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
 }
+​
 [ui-view].ng-enter {
-	.welcome & {
-		opacity: 0; 
-	}
-	.checkin & {
-		opacity: 0;
-		-webkit-transform:translate3d(0, -2000px, 0);
-		-moz-transform:translate3d(0, -2000px, 0);
-		transform:translate3d(0, -2000px, 0);
-	}
-	.encounters & {
-		-webkit-transform:translate3d(200px, 0, 0);
-		-moz-transform:translate3d(200px, 0, 0);
-		transform:translate3d(200px, 0, 0);
-	}
-	.report & {
-		opacity:0;
-		-webkit-transform:translate3d(-200px, 0, 0);
-		-moz-transform:translate3d(-200px, 0, 0);
-		transform:translate3d(-200px, 0, 0);
-	}
+    .welcome & {
+        opacity: 0; 
+    }
+​
+    .page2 & {
+        opacity: 0;
+        -webkit-transform:translate3d(0, -2000px, 0);
+        -moz-transform:translate3d(0, -2000px, 0);
+        transform:translate3d(0, -2000px, 0);
+    }
+​
+    .page3 & {
+        -webkit-transform:translate3d(200px, 0, 0);
+        -moz-transform:translate3d(200px, 0, 0);
+        transform:translate3d(200px, 0, 0);
+    }
+​
+    .page4 & {
+        opacity:0;
+        -webkit-transform:translate3d(-200px, 0, 0);
+        -moz-transform:translate3d(-200px, 0, 0);
+        transform:translate3d(-200px, 0, 0);
+    }
 }
+​
 [ui-view].ng-enter-active {
-	.welcome & {
-		opacity: 1; 
-	}
-	
-	.checkin & {
-		opacity: 1;
-		-webkit-transform:translate3d(0, 0, 0);
-		-moz-transform:translate3d(0, 0, 0);
-		transform:translate3d(0, 0, 0);
-	}
-	.encounters & {
-		-opacity: 1;
-		-webkit-transform:translate3d(0, 0, 0);
-		-moz-transform:translate3d(0, 0, 0);
-		transform:translate3d(0, 0, 0);
-	}
-	.report & {
-		opacity: 1;
-		-webkit-transform:translate3d(0, 0, 0);
-		-moz-transform:translate3d(0, 0, 0);
-		transform:translate3d(0, 0, 0);
-	}
+    .welcome & {
+        opacity: 1; 
+    }
+    
+    .page2 & {
+        opacity: 1;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+    }
+​
+    .page3 & {
+        opacity: 1;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+    }
+​
+    .page4 & {
+        opacity: 1;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+    }
 }
+​
 [ui-view].ng-leave {
-	.welcome & {
-		opacity: 1; 
-	}
-	
-	.checkin & {
-		opacity: 1; 
-		-webkit-transform:scale3d(1,1,1);
-		-moz-transform:scale3d(1,1,1);
-		transform:scale3d(1,1,1);
-	}
-	.encounters & {
-		opacity:1;
-		-webkit-transform:translate3d(0, 0, 0);
-		-moz-transform:translate3d(0, 0, 0);
-		transform:translate3d(0, 0, 0);
-	}
-	.report & {
-		opacity:1;
-		-webkit-transform:translate3d(0, 0, 0);
-		-moz-transform:translate3d(0, 0, 0);
-		transform:translate3d(0, 0, 0);
-	}
- 
+    .welcome & {
+        opacity: 1; 
+    }
+    
+    .page2  & {
+        opacity: 1; 
+        -webkit-transform:scale3d(1,1,1);
+        -moz-transform:scale3d(1,1,1);
+        transform:scale3d(1,1,1);
+    }
+​
+    .page3 & {
+        opacity:1;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+    }
+​
+    .page4 & {
+        opacity:1;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+    }
 }
+​
 [ui-view].ng-leave-active {
-	.welcome & {
-		opacity: 0;
-	}
-	.checkin & {
-		opacity: 0;
-		-webkit-transform:scale3d(0,0,0);
-		-moz-transform:scale3d(0,0,0);
-		transform:scale3d(0,0,0);
-	}
-	.encounters & {
-		opacity:0;
-		-webkit-transform:translate3d(-200px, 0, 0);
-		-moz-transform:translate3d(-200px, 0, 0);
-		transform:translate3d(-200px, 0, 0);
-	}
-	.report & {
-		opacity:0;
-		-webkit-transform:translate3d(200px, 0, 0);
-		-moz-transform:translate3d(200px, 0, 0);
-		transform:translate3d(200px, 0, 0);
-	}
+    .welcome & {
+        opacity: 0;
+    }
+​
+    .page2  & {
+        opacity: 0;
+        -webkit-transform:scale3d(0,0,0);
+        -moz-transform:scale3d(0,0,0);
+        transform:scale3d(0,0,0);
+    }
+​
+    .page3  & {
+        opacity:0;
+        -webkit-transform:translate3d(-200px, 0, 0);
+        -moz-transform:translate3d(-200px, 0, 0);
+        transform:translate3d(-200px, 0, 0);
+    }
+​
+    .page4  & {
+        opacity:0;
+        -webkit-transform:translate3d(200px, 0, 0);
+        -moz-transform:translate3d(200px, 0, 0);
+        transform:translate3d(200px, 0, 0);
+    }
+}
+
+.page{
+	position: absolute;
+	width:100%;
+	top: 0;
+	bottom: 0;
 }

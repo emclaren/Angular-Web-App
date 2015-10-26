@@ -1,7 +1,13 @@
 (function() {
 
-	var app = angular.module('marsApp', ['ui.router', 'ngCookies']);
+	var app = angular.module('marsApp', ['ui.router', 'ngAnimate','ngCookies']);
 
+ 
+app.run(function($rootScope){
+   $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+     $rootScope.stateName = toState.name;
+   });
+ });
 
 app.config(['$stateProvider', 
 					'$urlRouterProvider',
@@ -38,16 +44,15 @@ app.config(['$stateProvider',
 								)
 								.state('page3', {
 								url: '/page3',
-								templateUrl:'encounters.html'
+								templateUrl:'encounters.html',
+								controller: 'encountersCtrl',
 							})
 								.state('page4', {
 								url: '/page4',
 								templateUrl:'report.html',
-								controller:'ReportFormCtrl'
-							})
+								controller:'ReportFormCtrl',
+							});
 					}]);
-
-		
 
 app.controller('RegisterFormCtrl', ['$scope','$cookies', '$state', '$http', function($scope, $cookies, $state, $http) {
 
@@ -57,11 +62,11 @@ app.controller('RegisterFormCtrl', ['$scope','$cookies', '$state', '$http', func
 		$scope.colonist ={};
 		$http.get(API_URL_GET_JOBS).then(function(response){
 			$scope.jobs=response.data.jobs;
-		})
-		// $scope.jobs= [ 'Janitor', 'Alien Hunter', 'Dust Farmer'];
+		});
+  
 		$scope.showValidation= false;
 		$scope.submitRegistration = function (e, form){
-			e.preventDefault()
+			e.preventDefault();
 			console.log(form);
 		if ($scope.myForm.$invalid){
 			$scope.showValidation = true;
@@ -71,32 +76,32 @@ app.controller('RegisterFormCtrl', ['$scope','$cookies', '$state', '$http', func
 				url:API_URL_CREATE_COLONIST,
 				data: {colonist: $scope.colonist }
 			}).then(function(response){
-
-			$cookies.putObject('mars_user', response.data.colonist)
-
+			$cookies.putObject('mars_user', response.data.colonist);
 			$state.go('page3');
-			debugger;
-		})
+		});
 	}
+};
+}]);
 
-}
-}])
-
+app.controller('encountersCtrl', [ '$scope','$http', function($scope, $http){
+	var ENCOUNTERS_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
+		$http.get(ENCOUNTERS_API_URL).then(function(response){
+			$scope.encounters=response.data.encounters;
+		});
+	}]);
 
 app.controller('ReportFormCtrl', ['$scope', function($scope) {
 $scope.aliens= [ 'Lizard Man', 'Giant Slug'];
 $scope.showValidation= false;
 $scope.submitReport = function (e, form){
-	e.preventDefault()
+	e.preventDefault();
 	console.log(form);
 if ($scope.myForm2.$invalid){
 	$scope.showValidation = true;
 } else{
 alert('Report filed!');
 }
-}
-}])
+};
+}]);
 
 })();
-
-
