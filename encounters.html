@@ -1,9 +1,11 @@
-<div class="wrapper3">	
+<div class="wrapper3">
+	<div class="flex3">
 		<div  class= "encounter-header">	 
 			<h1> Recent Encouters<span></br>See an Ailen? Report it!</span></h1>
 		</div>
 		<div class="addhere">		
-			<div ng-repeat="encounter in encounters"><p>{{encounter.date}} - {{encounter.atype}}</p> <p>{{encounter.action}}</p>
+			<div ng-repeat="encounter in encounters"><p>{{encounter.date}} - {{encounter.atype}}</br> {{encounter.action}}</p>
+			</div>
 		</div>
 		<div class="bottomP3">
 			<div class="buttonP3">
@@ -13,3 +15,4 @@
 			</div>
 		</div>
 	</div>
+</div>

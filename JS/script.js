@@ -1,8 +1,11 @@
+ 
+
 (function() {
 
 	var app = angular.module('marsApp', ['ui.router', 'ngAnimate','ngCookies']);
 
  
+
 app.run(function($rootScope){
    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
      $rootScope.stateName = toState.name;
@@ -91,7 +94,7 @@ app.controller('encountersCtrl', [ '$scope','$http', function($scope, $http){
 	}]);
 
 app.controller('ReportFormCtrl', ['$scope', function($scope) {
-$scope.aliens= [ 'Lizard Man', 'Giant Slug'];
+$scope.aliens= [ 'The Coneheads', 'ET', 'ALF', 'Mork', 'Lizard Man', 'Kang & Kodos', 'Giant Slug', 'Octospider', 'Spider Monster'];
 $scope.showValidation= false;
 $scope.submitReport = function (e, form){
 	e.preventDefault();
