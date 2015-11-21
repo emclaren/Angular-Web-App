@@ -1,32 +1,33 @@
 .containerForm{
- display: flex;
- flex-direction:column;
- justify-content: space-around; 
- height: 80vh;
- padding:5%
+   display: flex;
+   flex-direction:column;
+   justify-content: space-between; 
+   height: 80vh;
+   padding:2rem;
+   h1{
+        padding-bottom: 2rem;
 }
-
+}
 
 .who{
     text-align: center;
     margin-bottom: 2rem;
-
-
+    h1{
+        padding:2rem;
+        margin-bottom: 1rem;
+    }
 }
-.who h1{
-    padding:3rem;
-}
-
 
 input{
-	 width: 100%;
-	 margin-bottom: 1.7rem;
-	 border:none;
-	 font-size:1rem;
-	 height: 2rem;
-	 font-weight: 300;
-	 padding-left: .5rem;
-	 border:none; 
+  width: 100%;
+  margin-bottom: 1.7rem;
+  border:none;
+  font-size:1rem;
+  height: 2rem;
+  font-weight: 300;
+  padding-left: .5rem;
+  border:none;
+  font-family: 'raleway',serif; 
 }
 
 select {
@@ -34,32 +35,22 @@ select {
     -moz-appearance: none;
     text-overflow: '';
     width: 100%;
- 	border:none;
- 	border-radius: 0px;
- 	line-height: 1.2rem;
+    border:none;
+    border-radius: 0px;
+    line-height: 1.2rem;
     background-color: white;
     margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 300;
     height: 2rem;
     padding-left: .5rem;
+    font-family: 'raleway',serif; 
 }
 
 fieldset{
 	border:none;
 }
 
-//Placeholder text color change
-*::-webkit-input-placeholder {
-  color: #ED4343; }
-
-*:-moz-placeholder {
-  color: #ED4343; }
-
-*:-ms-input-placeholder {
-  color: #ED4343; }
-
-  
 .button{
     background-color: #ED4343;
     color:white;
@@ -67,4 +58,24 @@ fieldset{
     padding-top: 1rem;
     padding-bottom: 2rem;
     font-size:1rem;
+    font-family: 'raleway', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+//Placeholder text color change
+*::-webkit-input-placeholder {
+  color: #ED4343; 
+}
+
+*:-moz-placeholder {
+    color: #ED4343; 
+}
+
+*:-ms-input-placeholder {
+    color: #ED4343; 
+}
+
+select.placeholder {
+    color:#ED4343;
 }

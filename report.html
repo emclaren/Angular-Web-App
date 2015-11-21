@@ -1,10 +1,8 @@
 
 <div class="wrapper4">	
 	<div  class= "containerReport">
-	<!-- 	<div class="heading"> -->
-			<h1> Report Encounter</br><span>Safetey on Mars is your responsibility</span></h1>
-
-
+		<div>
+			<h1> Report Encounter<span>Safetey on Mars is your responsibility</span></h1>
 			<form novalidate name="myForm2" ng-submit="expression" ng-class="{'show-validation': showValidation}"  ng-submit="submit()">
 				 <select name="alien"  ng-model="encounter.atype" ng-class="{'placeholder':!encounter.atype}" required>
 					<option value="" class="placeholder">Select Alien Type</option>
@@ -12,9 +10,9 @@
 				</select>
 				  	<textarea name="Text1" placeholder="Action Taken" cols="40" rows="9" ng-model="encounter.action" required></textarea>  
 			</form>
-			<div>
+			</div>
 		 		<input type="submit" class="button"  id="checkin" value="Submit Report" ng-click="submitReport($event, myForm2)" />
-		 	</div>
+		 
 		
 	</div>
 </div>

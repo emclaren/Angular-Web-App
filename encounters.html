@@ -1,11 +1,11 @@
 <div class="wrapper3">
 	<div class="flex3">
 		<div  class= "encounter-header">	 
-			<h1> Recent Encouters<span></br>See an Ailen? Report it!</span></h1>
+			<h1> Recent Encouters<span>See an Ailen? Report it!</span></h1>
 		</div>
 		<div class="addhere">		
-			<div ng-repeat="encounter in encounters"><p>{{encounter.date}} - {{encounter.atype}}</br> {{encounter.action}}</p>
-			</div>
+			<ul ng-repeat="encounter in encounters"><li>{{encounter.date}} - {{encounter.atype}}</br> {{encounter.action}}</li>
+			</ul>
 		</div>
 		<div class="bottomP3">
 			<div class="buttonP3">

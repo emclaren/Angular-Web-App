@@ -10,9 +10,9 @@
 box-sizing:border-box;
 }
 
-body {
+body, html {
 	background-color: black;
-	color:white;
+	color: white;
 	font-family: "raleway", serif;
 	font-size: 18px;
 }
@@ -20,7 +20,10 @@ body {
 h1{
 	font-size: 2rem;
 	text-align:center;
-	font-weight: 700;	
+	font-weight: 700;
+		span{
+		display:block;
+	}	
 }
 
 h2{
@@ -32,6 +35,7 @@ h2{
 a {
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 p{

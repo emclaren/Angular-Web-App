@@ -12,6 +12,11 @@
 
 .flex3 h1{
 	color:black;
+	padding: 2rem;
+}
+
+li{
+	padding: .5rem 1rem;
 }
 
 span{
@@ -24,7 +29,6 @@ span{
 	flex:8;
 	-webkit-box-flex: 1;
 	max-height: 70vh;
-	
 }
 .bottomP3{
 	background-color: black;
