@@ -241,16 +241,12 @@ li {
 span {
   font-size: 1rem; }
 
-.addhere {
+.encounter-list {
   color: black;
   overflow: scroll;
-  -webkit-flex: 8;
-  -ms-flex: 8;
-  flex: 8;
-  -webkit-box-flex: 1;
   max-height: 70vh; }
 
-.bottomP3 {
+.encounter-footer {
   background-color: black;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,24 +258,21 @@ span {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 2rem;
-  margin: 0%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
+  margin: 0;
   width: 100%; }
 
-.buttonP3 {
+.encounter-button {
   background-color: #ED4343;
   text-align: center;
-  width: 100%;
-  margin-left: 2%;
-  margin-right: 2%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 2%;
   font-size: 1rem;
-  padding: 1rem;
-  margin-bottom: 0%; }
+  padding: 1rem; }
 
 .containerReport {
   display: -webkit-flex;
@@ -300,7 +293,8 @@ textarea {
   width: 100%;
   font-size: 1rem;
   font-weight: 300;
-  padding-left: .5rem; }
+  padding-left: .5rem;
+  font-family: 'raleway', sans-serif; }
 
 @-webkit-keyframes border-pulse {
   0% {

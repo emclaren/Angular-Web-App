@@ -88,7 +88,7 @@
 		});
 	}]);
 
-	app.controller('ReportFormCtrl', ['$scope','$http', '$cookies', function($scope, $http, $cookies) {
+	app.controller('ReportFormCtrl', ['$scope','$http', '$cookies', '$filter', function($scope, $http, $cookies, $filter) {
 		var ALIEN_TYPE_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
 		var ENCOUNTERS_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
@@ -97,13 +97,12 @@
 			$scope.aliens=response.data.aliens;
 		});
 
-		$scope.encounter.date = "2015-11-02";
+		$scope.encounter.date =  $filter('date')(new Date(), 'yyyy-MM-dd');
 		$scope.encounter.colonist_id = $cookies.getObject('mars_user').id;
 
 		$scope.showValidation= false;
 		$scope.submitReport = function (e, form){
 			e.preventDefault();
-			//(getFullYear().toString() +"-"+ getMonth().toString() +"-"+ getDate())
 			if ($scope.myForm2.$invalid){
 				$scope.showValidation = true;
 			} else {
