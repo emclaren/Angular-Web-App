@@ -13,7 +13,7 @@
 			$urlRouterProvider,
 			$locationProvider){
 			$locationProvider.html5Mode({
-				enabled: true,
+				enabled: false,
 				requireBase:false,
 				reqriteLinks: false
 			});
@@ -21,7 +21,7 @@
 
 			$stateProvider
 			.state('welcome', {
-				url: '/',
+				url: '',
 				templateUrl:'mainpage.html',
 				controller: ['$cookies', function($cookies){
 					$cookies.putObject('mars_user', undefined);
