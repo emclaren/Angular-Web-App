@@ -11,14 +11,12 @@
     "connect-history-api-fallback": "^1.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-sass": "^2.0.4"
-  },
-  "dependencies": {
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp": "^3.9.0",
-    "angular-animate": "^1.4.7",
+    "gulp-sass": "^2.0.4",
     "browser-sync": "^2.9.11",
     "gulp-sass": "^2.0.4",
+  },
+  "dependencies": {
+    "angular-animate": "^1.4.7",
     "connect-history-api-fallback": "^1.1.0"
   },
   "repository": {
