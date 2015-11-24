@@ -1,6 +1,6 @@
 
 (function() {
-	var app = angular.module('marsApp', ['ui.router','ngCookies','ngAnimate'])
+	var app = angular.module('marsApp', ['ui.router','ngCookies','ngAnimate', 'ngTouch'])
 	app.run(function($rootScope){
 		$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
 			$rootScope.stateName = toState.name;
@@ -23,7 +23,10 @@
 			.state('welcome', {
 				url: '',
 				templateUrl:'mainpage.html',
-				controller: ['$cookies', function($cookies){
+				controller: ['$cookies', '$state', '$scope', function($cookies, $state, $scope){
+				$scope.swipeLeft =function(){
+					$state.go('page2');
+				}
 					$cookies.putObject('mars_user', undefined);
 				}],
 				controllerAs: 'welcome'
@@ -82,6 +85,7 @@
 	
 
 	app.controller('encountersCtrl', [ '$scope','$http', function($scope, $http){
+		debugger;
 		var ENCOUNTERS_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 		$http.get(ENCOUNTERS_API_URL).then(function(response){
 			$scope.encounters=response.data.encounters;
