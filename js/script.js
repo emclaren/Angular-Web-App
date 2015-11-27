@@ -85,7 +85,6 @@
 	
 
 	app.controller('encountersCtrl', [ '$scope','$http', function($scope, $http){
-		debugger;
 		var ENCOUNTERS_API_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 		$http.get(ENCOUNTERS_API_URL).then(function(response){
 			$scope.encounters=response.data.encounters;
