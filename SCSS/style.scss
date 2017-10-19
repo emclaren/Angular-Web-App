@@ -9,6 +9,9 @@
 // @import"animations";
 
 
+/* Main styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
 
 
 *{
@@ -45,136 +48,198 @@ h2{
 
 header{
 	margin:1rem;
+	position:fixed;
+	background-color:white; 
+
 }
 
+#header-link{
+	color:#242424;
+}
 
 
 section{
-	margin:3rem 1rem;
-	 border-bottom:solid lightgrey 1px;
-}
+	// margin:3rem 1rem;
+	 // border-bottom:solid lightgrey 1px;
+	}
 
 
 
+	#about{
+		text-align: center;
+	}
+
+	.about1{
+		line-height:1.9;
+	}
 
 
-.about-intro{
-	text-align: center;
-	line-height:1.5;
-	max-width:50%;
-	margin:3rem auto;
-	font-style: oblique;
-}
+	.about2{
+		line-height:1.7;
+	}
+	.about3{
+		line-height:1.5;
+	}
 
+	.about4{
+		line-height:1.4;
+	}
+	.about5{
+		line-height:1.3;
+	}
+	.about6{
+		line-height:1.2;
+		}.about7{
+			line-height:1.1;
+			}.about8{
+				line-height:1.0;
+				}.about9{
+					line-height:.9;
+				}
+				.about10{
+					line-height:.8;
 
-.cv-list{
-	margin: 1rem 0 2rem 0;
-	line-height:1.5rem;
+				}
+
+				.cv-list{
+					margin: 3rem 0 2rem 0;
+					line-height:1.5rem;
+	// text-align: center;
+
 }
 
 .work-card{
 	border: solid lightgrey 1px;
-				margin: 1rem 0 2rem 0;
+	margin: 1rem 0 2rem 0;
 
 	img{
 		width:100%;
 		height:150px;
 	}
 }
+#cv-list2{
+	// color:green;
+}
 
+#cv-list3{
+	// color:red;
+	background-color:white;
+	color: #242424;
+	width:80%;
+	margin:0 auto;
+	font-size:2rem;
+}
 #contact{
 	border-bottom: none;
+	color:white;
+	// background-color: #242424;
+	a{
+		// color:white;
+	}
 }
 .contact-list{
 	width:100%;
-  ul{
+	ul{
 
-    list-style: none; 
-    padding:1rem 0 4rem 0;
-   }
-  li{
-    font-size: 1.2rem;
-    padding:.8rem;
-      	text-align:center;
-  }
-  a{
-    color: #242424;
-    border-bottom:1px solid #242424;
-    text-decoration:none;
-  }
+		list-style: none; 
+		padding:1rem 0 4rem 0;
+	}
+	li{
+		font-size: 1.2rem;
+		padding:.8rem;
+		text-align:center;
+	}
+	a{
+		color: #242424;
+		border-bottom:1px solid #242424;
+		text-decoration:none;
+	}
+
+}
+
+.justify{
+	text-align: justify;
+	// margin-top:-90rem;
+}
+
+.right{
+	text-align: right;
 
 }
 
 
-/* Main styles */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+#portfolio{
+	z-index:3000;
+	// color:white;
+	font-size:2rem;
+	background-color:green;
+	height: 2000px;
+	width:80%;
+	margin:0 auto;
+	h2{
+		color:green;
 
-.text {
-  fill: none;
-  stroke-width: 6;
-  stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  -webkit-animation: stroke 6s infinite linear;
-  animation: stroke 6s infinite linear;
-}
-
-.text:nth-child(5n + 1) {
-  stroke: #F2385A;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
-}
-.text:nth-child(5n + 2) {
-  stroke: #F5A503;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
+	}
 }
 
-.text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
-}
 
-.text:nth-child(5n + 4) {
-  stroke: #56D9CD;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
-}
-
-.text:nth-child(5n + 5) {
-  stroke: #3AA1BF;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
-}
-
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
 
 /* Other styles */
 html, body {
-  height: 100%;
+	height: 100%;
 }
 
 body {
-  background: #212121;
-  background-size: .2em 100%;
-  font: 14.5em/1 Open Sans, Impact;
+  // background: #212121;
+  // background-size: .2em 100%;
+  font: 9em/1 Open Sans, Impact;
   text-transform: uppercase;
   margin: 0;
+  max-width:100%;
+  z-index:0;
 }
 
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.work{
+	width:300px;
+	height:200px;
+	background-color:#242424;
+	margin:30px;
+	display:inline-block;
 }
+
+#contact{
+	background-color:white;
+	height:100%;
+	color: #242424;
+}
+
+
+#cv-list3{
+	margin-bottom:300px;
+	background-color:green;
+}
+
+  // .red-background{
+  // 	background-color:rgb(251, 91, 78)}
+
+  .flex-container {
+  	padding: 0;
+  	margin: 0;
+  	list-style: none;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  }
+
+  .flex-item {
+  	background: tomato;
+  	padding: 5px;
+  	width: 200px;
+  	height: 150px;
+  	margin: 10px;
+  	color: white;
+  	font-weight: bold;
+  	font-size: 3em;
+  	text-align: center;
+  	  align-self:center;
+  }
