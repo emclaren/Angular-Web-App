@@ -126,7 +126,7 @@ header{
 }
 
 .top-padding{
-	height:50px;
+	height:62px;
 	// background-color:orange;
 }
 
@@ -243,10 +243,15 @@ img{
   }
 
   .color-pin12{
-  	z-index:1000
+  	z-index:900
+  }
+  #header-freeze li{
+  	z-index: 20;
   }
 
   #research{
-  	height:100%;
-  	background-color: red;
+  	height:140%;
+  	height:900px;
+  	background-color: $font-accent;
+  	z-index: 1000;
   }

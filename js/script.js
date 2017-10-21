@@ -22,10 +22,10 @@ $(function () { // wait for document ready
 
 
 
-						// var scene = new ScrollMagic.Scene({triggerElement: "#color-trigger1"})
-						// .setPin("#intro-text")
-						// .addIndicators({name: "1 (duration: 200)"}) // add indicators (requires plugin)
-						// .addTo(controller);
+						var scene = new ScrollMagic.Scene({triggerElement: "#header-freeze"})
+						.setPin("#header-freeze")
+						.addIndicators({name: "1 (duration: 200)"}) // add indicators (requires plugin)
+						.addTo(controller);
 
 
 						var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 300, offset: -200})
@@ -128,7 +128,7 @@ $(function () { // wait for document ready
 						.setTween("#color-pin11", .5, {color: "rgb(251, 91, 78)", scale:1.05}) // trigger a TweenMax.to tween
 						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 						.addTo(controller);
-					
+
 
 
 
@@ -157,5 +157,40 @@ $(function () { // wait for document ready
 						// .setPin("#pin5")
 						// .addIndicators({name: "1 (duration: 200)"}) // add indicators (requires plugin)
 						// .addTo(controller);
-					
-});
+
+
+/* make panel come up in front, and freeze the panel after text*/
+
+							$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+
+		// get all slides
+		var slides = document.querySelectorAll("section.panel");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+				triggerElement: slides[i]
+			})
+			.setPin(slides[i])
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+			}
+		});
+
+
+
+							var scene = new ScrollMagic.Scene({triggerElement: ".panel"})
+							.setPin(".red-section")
+						.addIndicators({name: "1 (duration: 200)"}) // add indicators (requires plugin)
+						.addTo(controller);
+
+
+
+
+					});

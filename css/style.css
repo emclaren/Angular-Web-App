@@ -126,7 +126,7 @@ header {
   text-align: right; }
 
 .top-padding {
-  height: 50px; }
+  height: 62px; }
 
 img {
   width: 100%; }
@@ -204,8 +204,13 @@ img {
   align-self: center; }
 
 .color-pin12 {
-  z-index: 1000; }
+  z-index: 900; }
+
+#header-freeze li {
+  z-index: 20; }
 
 #research {
-  height: 100%;
-  background-color: red; }
+  height: 140%;
+  height: 900px;
+  background-color: #fb5b4e;
+  z-index: 1000; }
