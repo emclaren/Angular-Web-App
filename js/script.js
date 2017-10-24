@@ -159,18 +159,18 @@ $(function () { // wait for document ready
 						// .addTo(controller);
 
 
-/* make panel come up in front, and freeze the panel after text*/
+						/* make panel come up in front, and freeze the panel after text*/
 
 							$(function () { // wait for document ready
-		// init
-		var controller = new ScrollMagic.Controller({
-			globalSceneOptions: {
-				triggerHook: 'onLeave'
-			}
-		});
+							// init
+							var controller = new ScrollMagic.Controller({
+								globalSceneOptions: {
+									triggerHook: 'onLeave'
+								}
+							});
 
-		// get all slides
-		var slides = document.querySelectorAll("section.panel");
+								// get all slides
+								var slides = document.querySelectorAll("section.panel");
 
 		// create scene for every slide
 		for (var i=0; i<slides.length; i++) {
@@ -185,7 +185,7 @@ $(function () { // wait for document ready
 
 
 
-							var scene = new ScrollMagic.Scene({triggerElement: ".panel"})
+							var scene = new ScrollMagic.Scene({triggerElement: ".panel", duration: 400})
 							.setPin(".red-section")
 						.addIndicators({name: "1 (duration: 200)"}) // add indicators (requires plugin)
 						.addTo(controller);

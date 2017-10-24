@@ -116,8 +116,10 @@ header {
   line-height: .8; }
 
 .cv-list {
-  margin: 3rem 0 2rem 0;
-  line-height: 7rem; }
+  margin: 2rem 1rem 5rem 1rem;
+  padding-bottom: 4rem;
+  line-height: 7rem;
+  font-size: 7rem; }
 
 .justify {
   text-align: justify; }
@@ -134,7 +136,7 @@ img {
 #work {
   background-color: white;
   color: #242424;
-  width: 80%;
+  height: 900px;
   margin: 0 auto;
   font-size: 2rem;
   margin-bottom: 300px;
@@ -155,13 +157,29 @@ img {
   padding: 3rem; }
 
 .work-card {
-  background-color: white;
-  z-index: 500; }
+  z-index: 500;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5rem 0; }
+  .work-card h2 {
+    font-size: 2rem;
+    margin: 3rem 1rem; }
 
 #contact {
-  height: 100%;
+  background-color: #fb5b4e;
+  height: 900px;
   color: #242424;
   z-index: 800; }
+  #contact h2 {
+    color: white;
+    font-size: 2rem;
+    margin: 3rem 1rem; }
+
+.contact-card {
+  z-index: 500;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5rem 0; }
 
 .contact-list {
   width: 100%;
