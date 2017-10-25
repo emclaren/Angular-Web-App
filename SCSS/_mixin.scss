@@ -2,3 +2,18 @@ $font-stack:    "Lato", sans-serif;
 $font-color: #242424;
 $font-accent: rgb(251, 91, 78);
 
+$break-xsmall: 480px;
+$break-small: 736px;
+$break-medium: 960px;
+$break-large: 1280px;
+$break-xlarge: 1690px;
+$break-large: 1200px;
+
+
+
+
+// @media all and (max-width: 1690px) { ...}
+// @media all and (max-width: 1280px) { ...}
+// @media all and (max-width: 980px) { ... }
+// @media all and (max-width: 736px) { ... }
+// @media all and (max-width: 480px) { ... }

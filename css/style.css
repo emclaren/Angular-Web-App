@@ -51,9 +51,10 @@ table {
   box-sizing: border-box; }
 
 body, html {
+  overflow-x: hidden;
   background-color: white;
   color: #242424;
-  font-family: "Lato", sans-serif;
+  font-family: Open Sans, Impact;
   font-size: 18px;
   margin: 0;
   max-width: 100%;
@@ -61,65 +62,233 @@ body, html {
   text-transform: uppercase; }
 
 body {
-  font: 9em/1 Open Sans, Impact; }
+  font: Open Sans, Impact;
+  max-width: 100%; }
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: green; } }
+
+@media screen and (min-width: 736px) {
+  body {
+    background-color: orange; } }
+
+@media screen and (min-width: 960px) {
+  body {
+    background-color: yellow; } }
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: pink; } }
 
 h1 {
   font-weight: 400;
-  font-size: 1.3rem; }
+  font-size: .8rem; }
+  @media screen and (min-width: 480px) {
+    h1 {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1200px) {
+    h1 {
+      font-size: 1.3rem; } }
 
 h2 {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: .5rem;
   margin: 0; }
+  @media screen and (min-width: 480px) {
+    h2 {
+      font-size: .7rem; } }
+  @media screen and (min-width: 1200px) {
+    h2 {
+      font-size: 1.1rem; } }
+
+p {
+  font: 2.1rem Open Sans, Impact; }
+  @media screen and (min-width: 480px) {
+    p {
+      font: 4rem Open Sans, Impact; } }
+  @media screen and (min-width: 736px) {
+    p {
+      font: 5rem Open Sans, Impact; } }
+  @media screen and (min-width: 960px) {
+    p {
+      font: 7rem Open Sans, Impact; } }
+  @media screen and (min-width: 1200px) {
+    p {
+      font: 9em/1 Open Sans, Impact; } }
+
+span {
+  padding: 0; }
 
 header {
-  margin: 1rem;
   position: fixed;
   z-index: 100;
-  background-color: white; }
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  display: inline-block; }
+
+.site-header {
+  max-width: 100%; }
 
 #header-link {
   color: #242424; }
 
+.logo {
+  margin: .25rem;
+  color: #242424;
+  display: inline-block; }
+  .logo a {
+    text-decoration: none; }
+  @media screen and (min-width: 480px) {
+    .logo {
+      margin: 1rem; } }
+
+/* hamburger menu*/
+.hamburger {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1rem;
+  color: #242424;
+  border: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+  transition: color .5s; }
+  .hamburger:hover {
+    color: #fb5b4e; }
+  @media screen and (min-width: 480px) {
+    .hamburger {
+      font-size: 1.45rem;
+      padding: .5rem 1rem;
+      line-height: 1.5rem; } }
+  @media screen and (min-width: 736px) {
+    .hamburger {
+      font-size: 1.75rem;
+      padding: 1rem 1.5rem;
+      line-height: 2rem; } }
+
+.cross {
+  background: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: .5rem 1rem;
+  color: #242424;
+  border: 0;
+  font-size: 4rem;
+  line-height: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+  transition: color .5s; }
+  .cross:hover {
+    color: #fb5b4e; }
+
+.menu {
+  z-index: 1000000;
+  font-weight: bold;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  text-align: center; }
+  @media screen and (min-width: 736px) {
+    .menu {
+      font-size: 4rem; } }
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none; }
+  .menu li {
+    display: block;
+    padding: 15px 0 15px 0;
+    border-bottom: #dddddd 1px solid; }
+    .menu li:hover {
+      display: block;
+      background: #ffffff;
+      padding: 15px 0 15px 0;
+      border-bottom: #dddddd 5px solid; }
+
+.menu ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: #666; }
+
+.menu ul li a:hover {
+  color: #666;
+  text-decoration: none; }
+
+.menu a {
+  text-decoration: none;
+  color: #666; }
+
+.menu a:hover {
+  text-decoration: none;
+  color: #666; }
+
+.glyphicon-home {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin: 0 auto; }
+
+a {
+  color: #336699; }
+
+@media screen and (min-width: 960px) {
+  #color-trigger-intro-desktop {
+    position: absolute;
+    top: 500; } }
+
 #intro-text {
   text-align: center;
-  padding-top: 6rem; }
+  margin-top: 2rem;
+  padding-top: 3rem; }
+  @media screen and (min-width: 480px) {
+    #intro-text {
+      padding-top: 4rem; } }
+  @media screen and (min-width: 480px) {
+    #intro-text {
+      padding-top: 6rem; } }
 
-.about1 {
+.about1, .about2, .about3, .about4, .about5, .about6, .about7, .about8, .about9, .about10 {
   line-height: 1.9; }
 
-.about2 {
-  line-height: 1.7; }
-
-.about3 {
-  line-height: 1.5; }
-
-.about4 {
-  line-height: 1.4; }
-
-.about5 {
-  line-height: 1.3; }
-
-.about6 {
-  line-height: 1.2; }
-
-.about7 {
-  line-height: 1.1; }
-
-.about8 {
-  line-height: 1.0; }
-
-.about9 {
-  line-height: .9; }
-
-.about10 {
-  line-height: .8; }
+@media screen and (min-width: 736px) {
+  .about1 {
+    line-height: 1.9; }
+  .about2 {
+    line-height: 1.7; }
+  .about3 {
+    line-height: 1.5; }
+  .about4 {
+    line-height: 1.4; }
+  .about5 {
+    line-height: 1.3; }
+  .about6 {
+    line-height: 1.2; }
+  .about7 {
+    line-height: 1.1; }
+  .about8 {
+    line-height: 1.0; }
+  .about9 {
+    line-height: .9; }
+  .about10 {
+    line-height: .8; } }
 
 .cv-list {
   margin: 2rem 1rem 5rem 1rem;
-  padding-bottom: 4rem;
-  line-height: 7rem;
-  font-size: 7rem; }
+  padding-bottom: 4rem; }
+  @media screen and (min-width: 736px) {
+    .cv-list {
+      line-height: 7rem;
+      font-size: 7rem; } }
 
 .justify {
   text-align: justify; }
@@ -131,7 +300,8 @@ header {
   height: 62px; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 #work {
   background-color: white;
@@ -150,11 +320,19 @@ img {
   height: 200px;
   background-color: #242424;
   margin: 30px;
-  display: inline-block; }
+  display: inline-block;
+  max-width: 100%; }
+
+.work:hover {
+  width: 310px; }
 
 .work-heading {
   text-align: center;
   padding: 3rem; }
+
+.overlay {
+  z-index: 1000;
+  background-color: #242424; }
 
 .work-card {
   z-index: 500;
